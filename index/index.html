@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مسلسل السجن</title>
+    <style>
+        body {
+            font-family: 'Amiri', serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            direction: rtl;
+            /* توجيه النص إلى اليمين */
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #222;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #fff;
+        }
+
+        .playlist {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .playlist input[type="button"] {
+            border: none;
+            background-color: #8b0000;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            text-align: right;
+            display: none;
+            /* تغيير هنا */
+        }
+
+        .playlist input[type="button"].visible {
+            display: inline-block;
+        }
+
+        .playlist input[type="button"]:hover {
+            background-color: #6b0000;
+        }
+
+        iframe {
+            width: 100%;
+            height: 400px;
+            border: none;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .toggle-buttons {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .toggle-buttons input[type="button"] {
+            border: none;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            margin-right: 10px;
+        }
+
+        .toggle-buttons input[type="button"]:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <iframe allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;" allowfullscreen="true"
+            name="myframe"
+            src="https://main--heroic-blini-374b36.netlify.app/index/%D9%86%D8%B3%D9%8A%D9%85(1).html"></iframe>
+        <div class="toggle-buttons">
+            <input type="button" id="showEpisodesBtn" value="إظهار الحلقات" onclick="showEpisodes()" />
+            <input type="button" id="hideEpisodesBtn" value="إخفاء الحلقات" onclick="hideEpisodes()"
+                style="display: none;" />
+        </div>
+        <div class="playlist">
+            <input onclick="myframe.location.href='index/(1).html'" type="button" value="الحلقة 1" />
+            <input onclick="myframe.location.href='index/(2).html'" type="button" value="الحلقة 2" />
+            <input onclick="myframe.location.href='index/(3).html'" type="button" value="الحلقة 3" />
+            <input onclick="myframe.location.href='index/(4).html'" type="button" value="الحلقة 4" />
+            <input onclick="myframe.location.href='index/(5).html'" type="button" value="الحلقة 5" />
+            <input onclick="myframe.location.href='index/(6).html'" type="button" value="الحلقة 6" />
+            <input onclick="myframe.location.href='index/(7).html'" type="button" value="الحلقة 7" />
+            <input onclick="myframe.location.href='index/(8).html'" type="button" value="الحلقة 8" />
+            <input onclick="myframe.location.href='index/(9).html'" type="button" value="الحلقة 9" />
+            <input onclick="myframe.location.href='index/(10).html'" type="button" value="الحلقة 10" />
+            <input onclick="myframe.location.href='index/(11).html'" type="button" value="الحلقة 11" />
+            <input onclick="myframe.location.href='index/(12).html'" type="button" value="الحلقة 12" />
+            <input onclick="myframe.location.href='index/(13).html'" type="button" value="الحلقة 13" />
+            <input onclick="myframe.location.href='index/(14).html'" type="button" value="الحلقة 14" />
+            <input onclick="myframe.location.href='index/(15).html'" type="button" value="15 الحلقة" />
+        </div>
+    </div>
+    <script>
+        function showEpisodes() {
+            var episodes = document.querySelectorAll('.playlist input[type="button"]');
+            for (var i = 0; i < episodes.length; i++) {
+                episodes[i].classList.add('visible');
+            }
+            document.getElementById('showEpisodesBtn').style.display = 'none';
+            document.getElementById('hideEpisodesBtn').style.display = 'inline-block';
+        }
+
+        function hideEpisodes() {
+            var episodes = document.querySelectorAll('.playlist input[type="button"]');
+            for (var i = 0; i < episodes.length; i++) {
+                episodes[i].classList.remove('visible');
+            }
+            document.getElementById('showEpisodesBtn').style.display = 'inline-block';
+            document.getElementById('hideEpisodesBtn').style.display = 'none';
+        }
+    </script>
+</body>
+
+</html>
